@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatternsCodeSamples", "DesignPatternsCodeSamples\DesignPatternsCodeSamples.csproj", "{135E9409-A44D-449B-BC6F-808925E79DC5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPattern.Facade", "DesignPatternsCodeSamples\DesignPattern.Facade.csproj", "{135E9409-A44D-449B-BC6F-808925E79DC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

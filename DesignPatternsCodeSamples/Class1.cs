@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPatternsCodeSamples
+namespace DesignPatterns.Facade
 {
     public class Class1
     {
