@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPatterns.Facade
+namespace DesignPatternsCodeSamples
 {
-    public class Class1
+    public class Loan
     {
     }
 }
