@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Facade
 {
-    public class Loan
+    public class Credit
     {
-        public bool HasNoBadLoans(Customer c)
+        public bool HasGoodCredit(Customer c)
         {
-            Console.WriteLine("Check loans for " + c.Name);
+            Console.WriteLine("Check credit for " + c.Name);
             return true;
         }
     }
