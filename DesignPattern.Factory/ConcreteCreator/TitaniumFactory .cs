@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DesignPattern.Factory.ConcreteCreator
 {
-    class TitaniumFactory : CardFactory
+    public class TitaniumFactory : CardFactory
     {
         private int _creditLimit;
         private int _annualCharge;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DesignPattern.Factory.ConcreteProduct
 {
-     class TitaniumCreditCard : CreditCard
+    public class TitaniumCreditCard : CreditCard
     {
         private readonly string _cardType;
         private int _creditLimit;

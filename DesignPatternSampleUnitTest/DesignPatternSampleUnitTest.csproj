@@ -49,13 +49,17 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="DesigPatternTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DesignPattern.Factory\DesignPattern.Factory.csproj">
+      <Project>{42a5ead5-7468-425f-b61c-01df5711a7f0}</Project>
+      <Name>DesignPattern.Factory</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DesignPatternsCodeSamples\DesignPattern.Facade.csproj">
       <Project>{135e9409-a44d-449b-bc6f-808925e79dc5}</Project>
       <Name>DesignPattern.Facade</Name>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPattern.Factory.Product
 {
-   abstract class CreditCard
+   public abstract class CreditCard
     {
         public abstract string CardType { get; }
         public abstract int CreditLimit { get; set; }
