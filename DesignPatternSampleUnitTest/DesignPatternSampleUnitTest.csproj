@@ -60,6 +60,10 @@
       <Project>{7f902a78-cd20-473c-a392-80a625f8b0a4}</Project>
       <Name>DesignPattern.AbstractFactory</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DesignPattern.Adapter\DesignPattern.Adapter.csproj">
+      <Project>{05a0f349-d9e3-4417-aed6-3c8803b1d025}</Project>
+      <Name>DesignPattern.Adapter</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DesignPattern.Factory\DesignPattern.Factory.csproj">
       <Project>{42a5ead5-7468-425f-b61c-01df5711a7f0}</Project>
       <Name>DesignPattern.Factory</Name>

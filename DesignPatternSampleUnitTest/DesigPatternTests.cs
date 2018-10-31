@@ -9,6 +9,7 @@ using AbstractProduct = DesignPattern.AbstractFactory.Product;
 using DesignPatterns.Facade;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using DesignPattern.Adapter;
 
 namespace DesignPatternSampleUnitTest
 {
@@ -84,6 +85,16 @@ namespace DesignPatternSampleUnitTest
             Assert.AreEqual("MoneyBack", card.CardType);
             Assert.AreEqual(5000, card.WithdrawLimit);
             Assert.AreEqual(0000, card.Pin);
+
+        }
+
+        [TestMethod]
+        public void Adapter_pattern()
+        {
+            ITarget target = new Adapter();
+            var emps= target.request();
+
+            Assert.AreEqual(4, emps.Count);
 
         }
     }
