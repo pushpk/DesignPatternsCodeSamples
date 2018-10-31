@@ -72,6 +72,10 @@
       <Project>{135e9409-a44d-449b-bc6f-808925e79dc5}</Project>
       <Name>DesignPattern.Facade</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DessignPattern.Singleton\DessignPattern.Singleton.csproj">
+      <Project>{d5c9ffa6-fc80-43af-bc0f-f1aee47a0058}</Project>
+      <Name>DessignPattern.Singleton</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

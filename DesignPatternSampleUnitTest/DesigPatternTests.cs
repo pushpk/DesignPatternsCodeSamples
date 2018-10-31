@@ -10,6 +10,7 @@ using DesignPatterns.Facade;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DesignPattern.Adapter;
+using DessignPattern.Singleton;
 
 namespace DesignPatternSampleUnitTest
 {
@@ -31,7 +32,6 @@ namespace DesignPatternSampleUnitTest
         }
 
         [TestMethod]
-
         public void Factory_pattern_test()
         {
             CardFactory factory = null;
@@ -58,6 +58,7 @@ namespace DesignPatternSampleUnitTest
             Assert.AreEqual(0, card.AnnualCharge);
 
         }
+
         [TestMethod]
         public void Abstract_Factory_pattern_test()
         {
@@ -96,6 +97,15 @@ namespace DesignPatternSampleUnitTest
 
             Assert.AreEqual(4, emps.Count);
 
+        }
+
+        [TestMethod]
+        public void Singleton_pattern_test()
+        {
+            Singleton obj = Singleton.Instance;
+            string actualResult = obj.GetMessage();
+
+            Assert.AreEqual("Hello World from Singleton", actualResult);
         }
     }
 }
