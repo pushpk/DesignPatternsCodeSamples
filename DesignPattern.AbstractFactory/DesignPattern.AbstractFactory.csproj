@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{42A5EAD5-7468-425F-B61C-01DF5711A7F0}</ProjectGuid>
+    <ProjectGuid>{7F902A78-CD20-473C-A392-80A625F8B0A4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DesignPattern.Factory</RootNamespace>
-    <AssemblyName>DesignPattern.Factory</AssemblyName>
+    <RootNamespace>DesignPattern.AbstractFactory</RootNamespace>
+    <AssemblyName>DesignPattern.AbstractFactory</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -44,15 +44,16 @@
     <Compile Include="ConcreteCreator\MoneyBackFactory.cs" />
     <Compile Include="ConcreteCreator\PlatinumFactory .cs" />
     <Compile Include="ConcreteCreator\TitaniumFactory .cs" />
+    <Compile Include="ConcreteProduct\MoneyBackDebitCard.cs" />
     <Compile Include="ConcreteProduct\MoneyBackCreditCard.cs" />
+    <Compile Include="ConcreteProduct\PlatinumDebitCard.cs" />
     <Compile Include="ConcreteProduct\PlatinumCreditCard.cs" />
+    <Compile Include="ConcreteProduct\TitaniumDebitCard.cs" />
     <Compile Include="ConcreteProduct\TitaniumCreditCard.cs" />
     <Compile Include="Creator\CardFactory.cs" />
     <Compile Include="Product\CreditCard.cs" />
+    <Compile Include="Product\DebitCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="FactoryMethodDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

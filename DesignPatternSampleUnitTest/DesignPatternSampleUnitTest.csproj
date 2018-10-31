@@ -56,6 +56,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DesignPattern.AbstractFactory\DesignPattern.AbstractFactory.csproj">
+      <Project>{7f902a78-cd20-473c-a392-80a625f8b0a4}</Project>
+      <Name>DesignPattern.AbstractFactory</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DesignPattern.Factory\DesignPattern.Factory.csproj">
       <Project>{42a5ead5-7468-425f-b61c-01df5711a7f0}</Project>
       <Name>DesignPattern.Factory</Name>
