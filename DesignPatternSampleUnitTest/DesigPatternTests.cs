@@ -2,8 +2,8 @@
 using DesignPattern.Factory.ConcreteCreator;
 using DesignPattern.Factory.Creator;
 using DesignPattern.Factory.Product;
-using AbstractConcreteCreator =  DesignPattern.AbstractFactory.ConcreteCreator;
-using AbstractCreator  = DesignPattern.AbstractFactory.Creator;
+using AbstractConcreteCreator = DesignPattern.AbstractFactory.ConcreteCreator;
+using AbstractCreator = DesignPattern.AbstractFactory.Creator;
 using AbstractProduct = DesignPattern.AbstractFactory.Product;
 
 using DesignPatterns.Facade;
@@ -11,6 +11,9 @@ using DesignPatterns.Facade;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DesignPattern.Adapter;
 using DessignPattern.Singleton;
+using DesignPattern.Strategy.Context;
+using DesignPattern.Strategy.Strategy;
+using DesignPattern.Strategy.Concrete;
 
 namespace DesignPatternSampleUnitTest
 {
@@ -70,13 +73,13 @@ namespace DesignPatternSampleUnitTest
             switch (cardType.ToLower())
             {
                 case "moneyback":
-                   factory = new AbstractConcreteCreator.MoneyBackFactory(5000,"chase",0000);
+                    factory = new AbstractConcreteCreator.MoneyBackFactory(5000, "chase", 0000);
                     break;
                 case "titanium":
-                    factory = new AbstractConcreteCreator.TitaniumFactory(5000, "chase",1111);
+                    factory = new AbstractConcreteCreator.TitaniumFactory(5000, "chase", 1111);
                     break;
                 case "platinum":
-                    factory = new AbstractConcreteCreator.PlatinumFactory(5000, "chase",1212);
+                    factory = new AbstractConcreteCreator.PlatinumFactory(5000, "chase", 1212);
                     break;
                 default:
                     break;
@@ -93,7 +96,7 @@ namespace DesignPatternSampleUnitTest
         public void Adapter_pattern()
         {
             ITarget target = new Adapter();
-            var emps= target.request();
+            var emps = target.request();
 
             Assert.AreEqual(4, emps.Count);
 
@@ -106,6 +109,34 @@ namespace DesignPatternSampleUnitTest
             string actualResult = obj.GetMessage();
 
             Assert.AreEqual("Hello World from Singleton", actualResult);
+        }
+
+        [TestMethod]
+        public void Strategy_pattern_test()
+        {
+
+            IJumpBehavior highjump = new HighJump();
+            IJumpBehavior longjump = new LongJump();
+            IKickBehavior tornadokick = new TornadoKick();
+
+            // Make a fighter with desired behaviors 
+            Fighter ryu = new Ryu(tornadokick, longjump);
+
+            // Test behaviors 
+            string jumpText = ryu.jump();
+            string kickText = ryu.kick();
+            string punchText = ryu.punch();
+
+            Assert.AreEqual("Long Jump", jumpText);
+            Assert.AreEqual("Tornado Kick", kickText);
+            Assert.AreEqual("Default punch", punchText);
+
+            // Change behavior dynamically (algorithms are 
+            // interchangeable) 
+            ryu.setjump(highjump);
+            ryu.jump();
+
+            Assert.AreEqual("Long Jump", jumpText);
         }
     }
 }
