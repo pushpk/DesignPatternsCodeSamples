@@ -56,6 +56,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DeisgnPattern.Command\DeisgnPattern.Command.csproj">
+      <Project>{326ff22c-ef1b-4adf-8d17-ea40aa48f098}</Project>
+      <Name>DeisgnPattern.Command</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DesignPattern.AbstractFactory\DesignPattern.AbstractFactory.csproj">
       <Project>{7f902a78-cd20-473c-a392-80a625f8b0a4}</Project>
       <Name>DesignPattern.AbstractFactory</Name>
@@ -63,6 +67,10 @@
     <ProjectReference Include="..\DesignPattern.Adapter\DesignPattern.Adapter.csproj">
       <Project>{05a0f349-d9e3-4417-aed6-3c8803b1d025}</Project>
       <Name>DesignPattern.Adapter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DesignPattern.Decorator\DesignPattern.Decorator.csproj">
+      <Project>{ec09ff2f-c561-49e5-ac1c-1c138449beb9}</Project>
+      <Name>DesignPattern.Decorator</Name>
     </ProjectReference>
     <ProjectReference Include="..\DesignPattern.Factory\DesignPattern.Factory.csproj">
       <Project>{42a5ead5-7468-425f-b61c-01df5711a7f0}</Project>

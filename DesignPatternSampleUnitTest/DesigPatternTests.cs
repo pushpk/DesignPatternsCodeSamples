@@ -14,6 +14,12 @@ using DessignPattern.Singleton;
 using DesignPattern.Strategy.Context;
 using DesignPattern.Strategy.Strategy;
 using DesignPattern.Strategy.Concrete;
+using DesignPattern.Decorator.Component;
+using DesignPattern.Decorator.ConcreteComponent;
+using DesignPattern.Decorator.ConcreteDecorator;
+using DeisgnPattern.Command.Invoker;
+using DeisgnPattern.Command.Receiver;
+using DeisgnPattern.Command.ConcreteCommands;
 
 namespace DesignPatternSampleUnitTest
 {
@@ -138,5 +144,36 @@ namespace DesignPatternSampleUnitTest
 
             Assert.AreEqual("Long Jump", jumpText);
         }
+
+        [TestMethod]
+        public void Decorator_pattern_test()
+        {
+            Pizza largePizza = new LargePizza();
+            largePizza = new CheeseTopping(largePizza);
+            largePizza = new HamTopping(largePizza);
+            largePizza = new PappersTopping(largePizza);
+
+            string desc = largePizza.GetDescription();
+
+            Assert.AreEqual("Large pizza with cheese with Ham with pappers", desc);
+        }
+
+        [TestMethod]
+        public  void Command_pattern_test()
+        {
+            SimpleRemoteControl remote = new SimpleRemoteControl();
+            Light light = new Light();
+            Stereo stereo = new Stereo();
+
+            //we can change command dynamically
+            remote.SetCommand(new LightOnCommand(light));
+            string actualValueLight =   remote.ButtonWasPressed();
+
+            remote.SetCommand(new StereoOnWithDVDCommand(stereo));
+            string actualValueStereo = remote.ButtonWasPressed();
+
+            Assert.AreEqual(actualValueLight, "Light is on");
+            Assert.AreEqual(actualValueStereo, "Stereo is on All set to set DVD");
+                                                          }
     }
 }
