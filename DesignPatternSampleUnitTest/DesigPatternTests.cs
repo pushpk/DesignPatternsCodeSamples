@@ -20,6 +20,7 @@ using DesignPattern.Decorator.ConcreteDecorator;
 using DeisgnPattern.Command.Invoker;
 using DeisgnPattern.Command.Receiver;
 using DeisgnPattern.Command.ConcreteCommands;
+using DesignPattern.Proxy;
 
 namespace DesignPatternSampleUnitTest
 {
@@ -159,7 +160,7 @@ namespace DesignPatternSampleUnitTest
         }
 
         [TestMethod]
-        public  void Command_pattern_test()
+        public void Command_pattern_test()
         {
             SimpleRemoteControl remote = new SimpleRemoteControl();
             Light light = new Light();
@@ -167,13 +168,24 @@ namespace DesignPatternSampleUnitTest
 
             //we can change command dynamically
             remote.SetCommand(new LightOnCommand(light));
-            string actualValueLight =   remote.ButtonWasPressed();
+            string actualValueLight = remote.ButtonWasPressed();
 
             remote.SetCommand(new StereoOnWithDVDCommand(stereo));
             string actualValueStereo = remote.ButtonWasPressed();
 
             Assert.AreEqual(actualValueLight, "Light is on");
             Assert.AreEqual(actualValueStereo, "Stereo is on All set to set DVD");
-                                                          }
+        }
+
+        [TestMethod]
+        public void Proxy_pattern_test()
+        {
+            IInternet internet = new ProxyInternet();
+
+            var actualConResult =    internet.connectTo("a.com");
+
+            Assert.AreEqual("access to a.com is denied", actualConResult);
+
+        }
     }
 }

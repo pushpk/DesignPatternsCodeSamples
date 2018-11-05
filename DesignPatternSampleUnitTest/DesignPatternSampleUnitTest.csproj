@@ -76,6 +76,10 @@
       <Project>{42a5ead5-7468-425f-b61c-01df5711a7f0}</Project>
       <Name>DesignPattern.Factory</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DesignPattern.Proxy\DesignPattern.Proxy.csproj">
+      <Project>{cc6a91e6-b795-4828-806c-96d36d37fec1}</Project>
+      <Name>DesignPattern.Proxy</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DesignPattern.Strategy\DesignPattern.Strategy.csproj">
       <Project>{1c930fd4-66a5-4f47-a539-ebd25cf009d6}</Project>
       <Name>DesignPattern.Strategy</Name>

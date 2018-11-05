@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DeisgnPattern.Command.Command
+namespace DesignPattern.Proxy
 {
-    public interface ICommand
+public  interface IInternet
     {
-        
-        string Execute();
+        string connectTo(string serverHost);
+
     }
 }
