@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPattern.TemplateMethod.Bread">
+    <Position X="5.25" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAKAQAA=</HashCode>
+      <FileName>Bread.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.TemplateMethod.SourDough">
+    <Position X="3.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>SourDough.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.TemplateMethod.TwelveGrain">
+    <Position X="5.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>TwelveGrain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DesignPattern.TemplateMethod.WholeWheatcs">
+    <Position X="7.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>WholeWheatcs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

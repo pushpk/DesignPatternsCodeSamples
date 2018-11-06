@@ -21,6 +21,7 @@ using DeisgnPattern.Command.Invoker;
 using DeisgnPattern.Command.Receiver;
 using DeisgnPattern.Command.ConcreteCommands;
 using DesignPattern.Proxy;
+using DesignPattern.TemplateMethod;
 
 namespace DesignPatternSampleUnitTest
 {
@@ -185,6 +186,16 @@ namespace DesignPatternSampleUnitTest
             var actualConResult =    internet.connectTo("a.com");
 
             Assert.AreEqual("access to a.com is denied", actualConResult);
+
+        }
+
+        [TestMethod]
+        public void TemplateMethod_test()
+        {
+            SourDough sourDoughtBread = new SourDough();
+            string a =  sourDoughtBread.Make();
+
+            Assert.AreEqual(" Gathering Ingredients for sour dough  Baking the sour dough Slicing the SourDough bread!", a);
 
         }
     }

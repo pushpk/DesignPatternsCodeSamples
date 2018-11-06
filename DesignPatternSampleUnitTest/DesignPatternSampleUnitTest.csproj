@@ -84,6 +84,10 @@
       <Project>{1c930fd4-66a5-4f47-a539-ebd25cf009d6}</Project>
       <Name>DesignPattern.Strategy</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DesignPattern.TemplateMethod\DesignPattern.TemplateMethod.csproj">
+      <Project>{36eaa767-a182-4b4e-b0c4-54d9dfc727bb}</Project>
+      <Name>DesignPattern.TemplateMethod</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DesignPatternsCodeSamples\DesignPattern.Facade.csproj">
       <Project>{135e9409-a44d-449b-bc6f-808925e79dc5}</Project>
       <Name>DesignPattern.Facade</Name>
