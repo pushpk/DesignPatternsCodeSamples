@@ -10,8 +10,7 @@ namespace DesignPattern.Iterator.AggregateInterface
 {
     public interface ICandyCollection
     {
-        ConcreteAggregate.JellyBeanCollection JellyBeanCollection { get; set; }
-
+    
         JellyBeanIterator CreateIterator();
     }
 }

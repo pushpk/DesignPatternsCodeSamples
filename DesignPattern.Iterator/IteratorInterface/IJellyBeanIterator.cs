@@ -16,6 +16,6 @@ namespace DesignPattern.Iterator.IteratorInterface
 
         bool IsDone { get; }
         JellyBean CurrentBean { get; }
-        ConcreteIterator.JellyBeanIterator JellyBeanIterator { get; set; }
+    
     }
 }

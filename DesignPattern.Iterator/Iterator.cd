@@ -27,41 +27,17 @@
   </Class>
   <Interface Name="DesignPattern.Iterator.AggregateInterface.ICandyCollection">
     <Position X="2.5" Y="1.25" Width="1.5" />
-    <AssociationLine Name="JellyBeanCollection" Type="DesignPattern.Iterator.ConcreteAggregate.JellyBeanCollection">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.016" Y="1.029" />
-      </MemberNameLabel>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAACAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>AggregateInterface\ICandyCollection.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="JellyBeanCollection" />
-    </ShowAsAssociation>
   </Interface>
   <Interface Name="DesignPattern.Iterator.IteratorInterface.IJellyBeanIterator">
     <Position X="5.75" Y="1.25" Width="1.5" />
-    <AssociationLine Name="JellyBeanIterator" Type="DesignPattern.Iterator.ConcreteIterator.JellyBeanIterator" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="7.25" Y="3.382" />
-        <Point X="7.25" Y="3.751" />
-        <Point X="7.354" Y="3.751" />
-        <Point X="7.354" Y="4.131" />
-        <Point X="6.5" Y="4.131" />
-        <Point X="6.5" Y="4.5" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.786" Y="0.477" />
-      </MemberNameLabel>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AiAAACAAAAAAAQAAAAAAAAAAAEAAAAAAAAACAAAAAAA=</HashCode>
+      <HashCode>AgAAACAAAAAAAQAAAAAAAAAAAEAAAAAAAAACAAAAAAA=</HashCode>
       <FileName>IteratorInterface\IJellyBeanIterator.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="JellyBeanIterator" />
-    </ShowAsAssociation>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

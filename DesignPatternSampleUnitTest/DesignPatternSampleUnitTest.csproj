@@ -68,6 +68,14 @@
       <Project>{05a0f349-d9e3-4417-aed6-3c8803b1d025}</Project>
       <Name>DesignPattern.Adapter</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DesignPattern.Bridge\DesignPattern.Bridge.csproj">
+      <Project>{9fb48107-53a6-498f-83a8-da1e12b689bd}</Project>
+      <Name>DesignPattern.Bridge</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DesignPattern.Builder\DesignPattern.Builder.csproj">
+      <Project>{a6dbbe2b-e26b-4db3-9c7b-57a760d364b4}</Project>
+      <Name>DesignPattern.Builder</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DesignPattern.Composite\DesignPattern.Composite.csproj">
       <Project>{6e8ab94d-c63f-4c28-8e14-83dad0e3467d}</Project>
       <Name>DesignPattern.Composite</Name>

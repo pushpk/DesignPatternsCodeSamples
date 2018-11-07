@@ -30,8 +30,9 @@ namespace DesignPattern.Iterator.ConcreteIterator
             get { return _jellyBeans[_current] as JellyBean; }
         }
 
+        
 
-    public JellyBean First()
+        public JellyBean First()
         {
             _current = 0;
             return _jellyBeans[_current] as JellyBean;

@@ -27,6 +27,10 @@ using DesignPattern.Composite.Leaf;
 using DesignPattern.Iterator.ConcreteAggregate;
 using DesignPattern.Iterator;
 using DesignPattern.Iterator.ConcreteIterator;
+using DesignPattern.Builder.Builder;
+using DesignPattern.Builder.Director;
+using DesignPattern.Builder.ConcreteBuilders;
+using DesignPattern.Builder.Product;
 
 namespace DesignPatternSampleUnitTest
 {
@@ -252,6 +256,18 @@ namespace DesignPatternSampleUnitTest
             JellyBean lastJellyBean = iterator.Last();
             Assert.AreEqual("Coconut", lastJellyBean.Flavor);
 
+        }
+
+        [TestMethod]
+        public void Builder_pattern_test()
+        {
+            HouseBuilder iglooBuilder = new IglooHouseBuilder();
+            CivilEngineer engineer = new CivilEngineer(iglooBuilder);
+            engineer.constructHouse();
+            House house = engineer.getHouse();
+           
+            Assert.AreEqual("Ice Bars", house.basement);
+           
         }
     }
 }
