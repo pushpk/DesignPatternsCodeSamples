@@ -22,6 +22,8 @@ using DeisgnPattern.Command.Receiver;
 using DeisgnPattern.Command.ConcreteCommands;
 using DesignPattern.Proxy;
 using DesignPattern.TemplateMethod;
+using DesignPattern.Composite.Composite;
+using DesignPattern.Composite.Leaf;
 
 namespace DesignPatternSampleUnitTest
 {
@@ -196,6 +198,31 @@ namespace DesignPatternSampleUnitTest
             string a =  sourDoughtBread.Make();
 
             Assert.AreEqual(" Gathering Ingredients for sour dough  Baking the sour dough Slicing the SourDough bread!", a);
+
+        }
+
+        [TestMethod]
+        public void Composite_pattern_test()
+        {
+            var colas = new Cola(210);
+            colas.Flavors.Add(new VanillaCola(215));
+            colas.Flavors.Add(new CherryCola(220));
+
+            //var lemonLime = new LemonLime(185);
+
+            //var rootBeers = new RootBeer(195);
+            //rootBeers.Flavors.Add(new VanillaRootBeer(200));
+            //rootBeers.Flavors.Add(new StrawberryRootBeer(200));
+
+            SodaWater sodaWater = new SodaWater(180);
+            sodaWater.Flavors.Add(colas);
+
+            //sodaWater.Flavors.Add(lemonLime);
+            //sodaWater.Flavors.Add(rootBeers);
+
+          var actValue =   sodaWater.DisplayCalories();
+
+            Assert.AreEqual("SodaWater: 180 caloriesCola: 210 caloriesVanillaCola: 215 caloriesCherryCola: 220 calories", actValue);
 
         }
     }
