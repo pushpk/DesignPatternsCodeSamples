@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DesignPattern.Iterator.ConcreteAggregate.JellyBeanCollection">
+    <Position X="2.5" Y="4.5" Width="1.5" />
+    <AssociationLine Name="JellyBeanIterator" Type="DesignPattern.Iterator.ConcreteIterator.JellyBeanIterator" FixedFromPoint="true">
+      <Path>
+        <Point X="4" Y="6.5" />
+        <Point X="5.75" Y="6.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAACCAAAAAQAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConcreteAggregate\JellyBeanCollection.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="JellyBeanIterator" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DesignPattern.Iterator.ConcreteIterator.JellyBeanIterator">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAICAAAAAAAQAAAAAAAAAAAEAAAAAAAAACBAgAAAA=</HashCode>
+      <FileName>ConcreteIterator\JellyBeanIterator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="DesignPattern.Iterator.AggregateInterface.ICandyCollection">
+    <Position X="2.5" Y="1.25" Width="1.5" />
+    <AssociationLine Name="JellyBeanCollection" Type="DesignPattern.Iterator.ConcreteAggregate.JellyBeanCollection">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.016" Y="1.029" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AggregateInterface\ICandyCollection.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="JellyBeanCollection" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="DesignPattern.Iterator.IteratorInterface.IJellyBeanIterator">
+    <Position X="5.75" Y="1.25" Width="1.5" />
+    <AssociationLine Name="JellyBeanIterator" Type="DesignPattern.Iterator.ConcreteIterator.JellyBeanIterator" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.25" Y="3.382" />
+        <Point X="7.25" Y="3.751" />
+        <Point X="7.354" Y="3.751" />
+        <Point X="7.354" Y="4.131" />
+        <Point X="6.5" Y="4.131" />
+        <Point X="6.5" Y="4.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.786" Y="0.477" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AiAAACAAAAAAAQAAAAAAAAAAAEAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>IteratorInterface\IJellyBeanIterator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="JellyBeanIterator" />
+    </ShowAsAssociation>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

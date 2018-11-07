@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPattern.TemplateMetho
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPattern.Composite", "DesignPattern.Composite\DesignPattern.Composite.csproj", "{6E8AB94D-C63F-4C28-8E14-83DAD0E3467D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPattern.Iterator", "DesignPattern.Iterator\DesignPattern.Iterator.csproj", "{16779AED-C4C6-4A5C-BC3D-91B8F599ACE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{6E8AB94D-C63F-4C28-8E14-83DAD0E3467D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E8AB94D-C63F-4C28-8E14-83DAD0E3467D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E8AB94D-C63F-4C28-8E14-83DAD0E3467D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16779AED-C4C6-4A5C-BC3D-91B8F599ACE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16779AED-C4C6-4A5C-BC3D-91B8F599ACE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16779AED-C4C6-4A5C-BC3D-91B8F599ACE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16779AED-C4C6-4A5C-BC3D-91B8F599ACE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

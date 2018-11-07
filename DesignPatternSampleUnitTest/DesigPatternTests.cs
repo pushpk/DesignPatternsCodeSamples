@@ -24,6 +24,9 @@ using DesignPattern.Proxy;
 using DesignPattern.TemplateMethod;
 using DesignPattern.Composite.Composite;
 using DesignPattern.Composite.Leaf;
+using DesignPattern.Iterator.ConcreteAggregate;
+using DesignPattern.Iterator;
+using DesignPattern.Iterator.ConcreteIterator;
 
 namespace DesignPatternSampleUnitTest
 {
@@ -223,6 +226,31 @@ namespace DesignPatternSampleUnitTest
           var actValue =   sodaWater.DisplayCalories();
 
             Assert.AreEqual("SodaWater: 180 caloriesCola: 210 caloriesVanillaCola: 215 caloriesCherryCola: 220 calories", actValue);
+
+        }
+
+        [TestMethod]
+        public void Iterator_pattern_test()
+        {
+            JellyBeanCollection collection = new JellyBeanCollection();
+            collection[0] = new JellyBean("Cherry");
+            collection[1] = new JellyBean("Bubble Gum");
+            collection[2] = new JellyBean("Root Beer");
+            collection[3] = new JellyBean("French Vanilla");
+            collection[4] = new JellyBean("Licorice");
+            collection[5] = new JellyBean("Buttered Popcorn");
+            collection[6] = new JellyBean("Juicy Pear");
+            collection[7] = new JellyBean("Cinnamon");
+            collection[8] = new JellyBean("Coconut");
+
+            //Create Interator
+            JellyBeanIterator iterator = collection.CreateIterator();
+
+             JellyBean firstJellyBean  = iterator.First();
+            Assert.AreEqual("Cherry",firstJellyBean.Flavor);
+
+            JellyBean lastJellyBean = iterator.Last();
+            Assert.AreEqual("Coconut", lastJellyBean.Flavor);
 
         }
     }

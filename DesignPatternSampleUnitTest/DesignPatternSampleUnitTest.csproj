@@ -80,6 +80,10 @@
       <Project>{42a5ead5-7468-425f-b61c-01df5711a7f0}</Project>
       <Name>DesignPattern.Factory</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DesignPattern.Iterator\DesignPattern.Iterator.csproj">
+      <Project>{16779aed-c4c6-4a5c-bc3d-91b8f599ace1}</Project>
+      <Name>DesignPattern.Iterator</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DesignPattern.Proxy\DesignPattern.Proxy.csproj">
       <Project>{cc6a91e6-b795-4828-806c-96d36d37fec1}</Project>
       <Name>DesignPattern.Proxy</Name>
