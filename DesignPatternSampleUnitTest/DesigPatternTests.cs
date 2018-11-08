@@ -31,6 +31,7 @@ using DesignPattern.Builder.Builder;
 using DesignPattern.Builder.Director;
 using DesignPattern.Builder.ConcreteBuilders;
 using DesignPattern.Builder.Product;
+using DesignPattern.NullObject;
 
 namespace DesignPatternSampleUnitTest
 {
@@ -269,5 +270,15 @@ namespace DesignPatternSampleUnitTest
             Assert.AreEqual("Ice Bars", house.basement);
            
         }
+        
+        [TestMethod]
+        public void NullObject_pattern_test()
+        {
+            Order NoDiscountOrder = new Order(new NullDiscount());
+           double zeroDiscount =  NoDiscountOrder.CalculateDiscount();
+
+            Assert.AreEqual(0, zeroDiscount);
+        }
+
     }
 }

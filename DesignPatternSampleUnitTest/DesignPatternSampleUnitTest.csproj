@@ -92,6 +92,10 @@
       <Project>{16779aed-c4c6-4a5c-bc3d-91b8f599ace1}</Project>
       <Name>DesignPattern.Iterator</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DesignPattern.NullObject\DesignPattern.NullObject.csproj">
+      <Project>{2e033546-67dc-42ea-981f-1dcfe08fe384}</Project>
+      <Name>DesignPattern.NullObject</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DesignPattern.Proxy\DesignPattern.Proxy.csproj">
       <Project>{cc6a91e6-b795-4828-806c-96d36d37fec1}</Project>
       <Name>DesignPattern.Proxy</Name>
