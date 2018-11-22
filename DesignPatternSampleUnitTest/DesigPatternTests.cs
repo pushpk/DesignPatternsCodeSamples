@@ -5,9 +5,7 @@ using DesignPattern.Factory.Product;
 using AbstractConcreteCreator = DesignPattern.AbstractFactory.ConcreteCreator;
 using AbstractCreator = DesignPattern.AbstractFactory.Creator;
 using AbstractProduct = DesignPattern.AbstractFactory.Product;
-
 using DesignPatterns.Facade;
-
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DesignPattern.Adapter;
 using DessignPattern.Singleton;
@@ -32,6 +30,7 @@ using DesignPattern.Builder.Director;
 using DesignPattern.Builder.ConcreteBuilders;
 using DesignPattern.Builder.Product;
 using DesignPattern.NullObject;
+using DesignPattern.State;
 
 namespace DesignPatternSampleUnitTest
 {
@@ -279,6 +278,28 @@ namespace DesignPatternSampleUnitTest
 
             Assert.AreEqual(0, zeroDiscount);
         }
+
+        [TestMethod]
+        public void State_pattern_test()
+        {
+             string TEST_POLICY_NUMBER = "007";
+            var testPolicy = new Policy(TEST_POLICY_NUMBER);
+
+           var testCancelledState = new CancelledState(testPolicy);
+           var testClosedState = new ClosedState(testPolicy);
+           var testOpenState = new OpenState(testPolicy);
+           var testUnwrittenState = new UnwrittenState(testPolicy);
+            var testVoidState = new VoidState(testPolicy);
+
+            //closing open policy
+            testOpenState.Close(DateTime.Now);
+
+            Assert.IsInstanceOfType(testPolicy.State, typeof(ClosedState));
+
+
+        }
+
+
 
     }
 }

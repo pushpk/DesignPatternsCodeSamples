@@ -100,6 +100,10 @@
       <Project>{cc6a91e6-b795-4828-806c-96d36d37fec1}</Project>
       <Name>DesignPattern.Proxy</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DesignPattern.State\DesignPattern.State.csproj">
+      <Project>{45c65f60-bac6-4bf7-a392-508d9d6140fc}</Project>
+      <Name>DesignPattern.State</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DesignPattern.Strategy\DesignPattern.Strategy.csproj">
       <Project>{1c930fd4-66a5-4f47-a539-ebd25cf009d6}</Project>
       <Name>DesignPattern.Strategy</Name>
