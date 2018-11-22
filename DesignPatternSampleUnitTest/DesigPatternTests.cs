@@ -31,6 +31,7 @@ using DesignPattern.Builder.ConcreteBuilders;
 using DesignPattern.Builder.Product;
 using DesignPattern.NullObject;
 using DesignPattern.State;
+using DesignPattern.Prototype;
 
 namespace DesignPatternSampleUnitTest
 {
@@ -192,7 +193,7 @@ namespace DesignPatternSampleUnitTest
         {
             IInternet internet = new ProxyInternet();
 
-            var actualConResult =    internet.connectTo("a.com");
+            var actualConResult = internet.connectTo("a.com");
 
             Assert.AreEqual("access to a.com is denied", actualConResult);
 
@@ -202,7 +203,7 @@ namespace DesignPatternSampleUnitTest
         public void TemplateMethod_test()
         {
             SourDough sourDoughtBread = new SourDough();
-            string a =  sourDoughtBread.Make();
+            string a = sourDoughtBread.Make();
 
             Assert.AreEqual(" Gathering Ingredients for sour dough  Baking the sour dough Slicing the SourDough bread!", a);
 
@@ -227,7 +228,7 @@ namespace DesignPatternSampleUnitTest
             //sodaWater.Flavors.Add(lemonLime);
             //sodaWater.Flavors.Add(rootBeers);
 
-          var actValue =   sodaWater.DisplayCalories();
+            var actValue = sodaWater.DisplayCalories();
 
             Assert.AreEqual("SodaWater: 180 caloriesCola: 210 caloriesVanillaCola: 215 caloriesCherryCola: 220 calories", actValue);
 
@@ -250,8 +251,8 @@ namespace DesignPatternSampleUnitTest
             //Create Interator
             JellyBeanIterator iterator = collection.CreateIterator();
 
-             JellyBean firstJellyBean  = iterator.First();
-            Assert.AreEqual("Cherry",firstJellyBean.Flavor);
+            JellyBean firstJellyBean = iterator.First();
+            Assert.AreEqual("Cherry", firstJellyBean.Flavor);
 
             JellyBean lastJellyBean = iterator.Last();
             Assert.AreEqual("Coconut", lastJellyBean.Flavor);
@@ -265,16 +266,16 @@ namespace DesignPatternSampleUnitTest
             CivilEngineer engineer = new CivilEngineer(iglooBuilder);
             engineer.constructHouse();
             House house = engineer.getHouse();
-           
+
             Assert.AreEqual("Ice Bars", house.basement);
-           
+
         }
-        
+
         [TestMethod]
         public void NullObject_pattern_test()
         {
             Order NoDiscountOrder = new Order(new NullDiscount());
-           double zeroDiscount =  NoDiscountOrder.CalculateDiscount();
+            double zeroDiscount = NoDiscountOrder.CalculateDiscount();
 
             Assert.AreEqual(0, zeroDiscount);
         }
@@ -282,13 +283,13 @@ namespace DesignPatternSampleUnitTest
         [TestMethod]
         public void State_pattern_test()
         {
-             string TEST_POLICY_NUMBER = "007";
+            string TEST_POLICY_NUMBER = "007";
             var testPolicy = new Policy(TEST_POLICY_NUMBER);
 
-           var testCancelledState = new CancelledState(testPolicy);
-           var testClosedState = new ClosedState(testPolicy);
-           var testOpenState = new OpenState(testPolicy);
-           var testUnwrittenState = new UnwrittenState(testPolicy);
+            var testCancelledState = new CancelledState(testPolicy);
+            var testClosedState = new ClosedState(testPolicy);
+            var testOpenState = new OpenState(testPolicy);
+            var testUnwrittenState = new UnwrittenState(testPolicy);
             var testVoidState = new VoidState(testPolicy);
 
             //closing open policy
@@ -299,7 +300,20 @@ namespace DesignPatternSampleUnitTest
 
         }
 
+        [TestMethod]
+        public void Prototype_pattern_test()
+        {
+            Developer dev = new Developer();
+            dev.Name = "Rahul";
+            dev.Role = "Team Leader";
+            dev.PreferredLanguage = "C#";
 
+            Developer devCopy = (Developer)dev.Clone();
+            devCopy.Name = "Arif";
 
+            Assert.AreEqual(dev.Role, devCopy.Role);
+            Assert.AreEqual(dev.PreferredLanguage, devCopy.PreferredLanguage);
+
+        }
     }
-}
+    }

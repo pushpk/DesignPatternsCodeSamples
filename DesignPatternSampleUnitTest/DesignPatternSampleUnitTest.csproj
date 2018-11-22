@@ -96,6 +96,10 @@
       <Project>{2e033546-67dc-42ea-981f-1dcfe08fe384}</Project>
       <Name>DesignPattern.NullObject</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DesignPattern.Prototype\DesignPattern.Prototype.csproj">
+      <Project>{524c6c5b-cfeb-4be1-b1d4-24abd99be536}</Project>
+      <Name>DesignPattern.Prototype</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DesignPattern.Proxy\DesignPattern.Proxy.csproj">
       <Project>{cc6a91e6-b795-4828-806c-96d36d37fec1}</Project>
       <Name>DesignPattern.Proxy</Name>
